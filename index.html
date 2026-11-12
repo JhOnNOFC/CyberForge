@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberForge Hardware</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/produtos.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CYBER<span>FORGE</span></a>
+        <nav>
+            <a href="admin.html">Painel Admin</a>
+            <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Componentes e Hardware</h1>
+        <p style="color: #aaa;">Escolha suas peças e monte seu setup.</p>
+
+        <!-- Barra de Busca e Ordenação do Cliente -->
+        <div class="ferramentas">
+            <input type="text" id="campo-busca" placeholder="Pesquisar por produto, marca ou categoria..." onkeyup="buscarProdutos()">
+            <button class="btn-secundario" onclick="ordenarPorPreco()">Menor Preço</button>
+            <button class="btn-secundario" onclick="ordenarAlfabetico()">Ordem A-Z</button>
+            <button class="btn-secundario" onclick="inverterLista()">Inverter</button>
+        </div>
+
+        <!-- Vitrine com os 35 Produtos -->
+        <div class="grade-produtos" id="lista-produtos-loja"></div>
+    </main>
+
+    <footer>
+        CyberForge Hardware — Loja Virtual
+    </footer>
+
+</body>
+</html>

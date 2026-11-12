@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho | CyberForge Hardware</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/produtos.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CYBER<span>FORGE</span></a>
+        <nav>
+            <a href="index.html">Voltar para Loja</a>
+            <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Seu Carrinho</h1>
+        <br>
+
+        <!-- Itens do Carrinho -->
+        <div id="lista-carrinho"></div>
+
+        <!-- Total e Finalização -->
+        <div class="resumo-box">
+            <h2>Total: <span id="total-carrinho" style="color: #39d98a;">R$ 0,00</span></h2>
+            <br>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <footer>
+        CyberForge Hardware — Projeto Acadêmico
+    </footer>
+
+</body>
+</html>

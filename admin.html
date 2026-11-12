@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | CyberForge Hardware</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/produtos.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">CYBER<span>FORGE</span> <small style="font-size: 12px; color: #aaa;">| ADMIN</small></a>
+        <nav>
+            <a href="index.html">Voltar para Loja</a>
+            <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Gerenciamento de Estoque</h1>
+        <p style="color: #aaa;">Adicione novos componentes ou remova itens do catálogo.</p>
+
+        <!-- Formulário de Cadastro (CREATE) -->
+        <section class="painel-cadastro">
+            <h2>Cadastrar Novo Produto</h2>
+            <form class="form-grid" onsubmit="cadastrarProduto(event)">
+                <input type="text" id="novo-nome" placeholder="Nome (ex: RTX 4070 Ti)" required>
+                <input type="text" id="nova-marca" placeholder="Marca (ex: NVIDIA)" required>
+                <input type="text" id="nova-categoria" placeholder="Categoria (ex: Placas de vídeo)" required>
+                <input type="number" id="novo-preco" step="0.01" placeholder="Preço (ex: 4500.00)" required>
+                <input type="url" id="nova-imagem" placeholder="URL da imagem (opcional)">
+                <button type="submit">Adicionar Produto</button>
+            </form>
+        </section>
+
+        <!-- Barra de Controle do Admin -->
+        <div class="ferramentas">
+            <input type="text" id="campo-busca" placeholder="Filtrar estoque..." onkeyup="buscarProdutosAdmin()">
+            <button class="btn-secundario" onclick="restaurarPadrao()">Restaurar 35 Produtos Originais</button>
+        </div>
+
+        <!-- Lista de Produtos para Gerenciar (DELETE) -->
+        <div class="grade-produtos" id="lista-produtos-admin"></div>
+    </main>
+
+    <footer>
+        CyberForge Hardware — Painel Administrativo
+    </footer>
+
+</body>
+</html>
